@@ -1,0 +1,17 @@
+header,
+footer {
+    background-color: var(--background-darker-colour);
+}
+
+header,
+main,
+footer {
+    padding: 1rem;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    place-content: end center;
+    place-items: end center;
+}
