@@ -5,7 +5,7 @@ $description = "An app to manage tasks.";
 $action = filter_input(INPUT_POST, "action", FILTER_SANITIZE_STRING);
 
 require("./model/database.php");
-require("./model/task_management_database.php");
+require("./model/authentication.php");
 
 if ($action == null) {
     goto SKIP_ACTION;
@@ -30,8 +30,8 @@ SKIP_ACTION:
 
 <?php include("./view/layout/layout_top.php") ?>
 
-<main>
-    <h1>Hello</h1>
+<main id="main-page">
+
 </main>
 
 <?php include("./view/layout/layout_bottom.php") ?>

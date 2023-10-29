@@ -1,8 +1,9 @@
 <?php
+global $database;
+
 $dataSourceName = "mysql:host=localhost;dbname=task_management";
 $user = "root";
 $password = "";
-$database;
 
 try {
     $database = new PDO($dataSourceName, $user, $password);

@@ -27,23 +27,25 @@ body {
 @mixin reset() {
     text-decoration: none;
 
-    list-style: none;
-
     margin: 0;
     padding: 0;
 
     color: inherit;
 }
 
+$heading-sizes: 270%, 180%, 140%;
 @for $i from 1 through 6 {
     h#{$i} {
         @include reset();
+
+        @if ($i <= length($list: $heading-sizes)) {
+            font-size: nth($list: $heading-sizes, $n: $i);
+        }
     }
 }
 
 p,
 q,
-ul,
 hr,
 a,
 a:active {
